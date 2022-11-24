@@ -1,0 +1,641 @@
+<html>
+
+<head>
+  <title>Express 2</title>
+  <link rel="stylesheet" href="stylesheets/mainpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://kit.fontawesome.com/15e6590408.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+  <a href="secondpagetest.html" style="">
+
+    <img src="./images/tftlogo-removebg-preview.png" style="width: 8%; height: 19%; position:absolute; margin-top: -3.4%;">
+
+  </a>
+  <div class="topnav" id="myTopnav" style="width: 1550px; margin-left: -4%; margin-top: -0.6%;">
+    <div class="items" style="margin-left: 76%;">
+     
+    <a href="secondpagetest.html" class="active" style="">Home</a>
+    <a href="#news" style="">Avaliar</a>
+    <a href="#contact" style="">Contacto</a>
+    <a href="#about" style="">Sobre Nós</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    </div>
+  </div>
+
+</head>
+
+<body>
+
+ 
+
+ 
+
+  <div style="background-color: rgb(54, 54, 54); width: 96.6%; height: 230%; margin-left: 3%;">
+
+
+    <div id="jogosrecentes">
+
+     <h2 style="position: absolute; margin-top: 5%; margin-left: 3%; font-size: 30px;">Plataformas</h2>
+
+     <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 8.4%; margin-left: 3%;">
+
+    </div>
+
+    <!--ALL PLATFORMS SECTION-->
+
+    <div id="platformssection">
+
+      <!--COMO FUNCIONARÁ ?
+      
+      1. EXISTE INICIALMENTE UM GET QUE OBTERÁ TODAS AS PLATAFORMAS DE JOGOS DISPONIVEIS
+
+      2. PARA CADA LOOP DE RESULTADOS, É RETIRADO O ID DO USER LOGGADO E O ID DA PLATAFORMA NO LOOP.
+
+      3. AINDA NUMA POSIÇÃO DO LOOP, É FEITA UMA VERIFICAÇÃO DE MODO A VERIFICAR SE UM ITEM COM O ID DO UTILIZADOR E O ID DA PLATAFORMA NO LOOP ATUAL EXISTE NA TABELA INTERMÉDIA
+
+      4. SE SIM, A PLATAFORMA DESSA POSIÇÃO SERÁ GERADA COM UM BOTÃO DE 'DEIXAR DE SEGUIR'
+
+      5. CASO CONTRÁRIO, A PLATAFORMA DESSA POSIÇÃO SERÁ GERADA COM UM BOTÃO 'SEGUIR'
+
+      6. UM BOTÃO DE SEGUIR REALIZA UM POST PARA A TABELA INTERMÉDIA, ATRAVÉS DO ID DO UTILIZADOR LOGGADO E DA PLATAFORMA.
+
+      7. UM BOTÃO DE DEIXAR DE SEGUIR REALIZA UM MÉTODO DELETE DA TABELA INTERMÉDIA.
+
+      ---------------------------------------------
+
+
+      
+      
+      -->
+
+      
+
+
+
+        <!--HAVERÁ AQUI UMA FUNÇÃO DE GET DAS PLATAFORMAS EM BOTÃO (PARA SEGUIR)
+
+        <div id="platformsicons">
+
+            <img src="./images/pc-removebg-preview.png" style="width: 8%; height: 8%; margin-top: 7%; margin-left: 2%;">
+
+            <div id="pcfunctions" style="position: absolute; margin-left: 12%; margin-top: -6.3%;">
+
+              <h2>PC & Laptop</h2>
+              <button id="followpcandlaptop" onclick="followpcandlaptop()" style="width: 30%; font-size: 17px; color: white; background-color: lightblue; border-radius: 13px; margin-left: 170%; margin-top: -8%;" >Seguir <img src="./images/add.png" style="width: 9%; height: 9%;"></button>
+              <button id="unfollowpcandlaptop" onclick="unfollowpcandlaptop()" style="width: 30%; font-size: 17px; color: white; background-color: orange; border-radius: 13px; margin-left: 170%; margin-top: -8%; position: absolute;" >Deixar de Seguir <img src="./images/delete-friend.png" style="width: 9%; height: 9%;"></button>
+
+            </div>
+
+            <img src="./images/playstation-removebg-preview.png" style="width: 8%; height: 18%; margin-top: 15%; margin-left: -7.8%; position:absolute;">
+
+            <div id="playstationfunctions" style="position: absolute; margin-left: 12%; margin-top: 2.3%;">
+
+              <h2>PlayStation</h2>
+              <button id="followplaystation" onclick="followplaystation()" style="width: 30%; font-size: 17px; color: white; background-color: lightblue; border-radius: 13px; margin-left: 170%; margin-top: -8%;" >Seguir <img src="./images/add.png" style="width: 9%; height: 9%;"></button>
+              <button id="unfollowplaystation" onclick="unfollowplaystation()" style="width: 30%;  font-size: 17px; color: white; background-color: orange; border-radius: 13px; margin-left: 170%; margin-top: -8%; position: absolute;" >Deixar de Seguir <img src="./images/delete-friend.png" style="width: 9%; height: 9%;"></button>
+
+            </div>
+
+
+            <img src="./images/xbox-removebg-preview.png" style="width: 8%; height: 18%; margin-top: 24%; margin-left: -7.8%; position:absolute;">
+
+            <div id="xboxfunctions" style="position: absolute; margin-left: 12%; margin-top: 10.5%;">
+
+              <h2>Xbox One & 360</h2>
+              <button id="followxboxone360" onclick="followxboxone360()" style="width: 30%; font-size: 17px; color: white; background-color: lightblue; border-radius: 13px; margin-left: 170%; margin-top: -8%;" >Seguir <img src="./images/add.png" style="width: 9%; height: 9%;"></button>
+              <button id="unfollowxboxone360" onclick="unfollowxboxone360()" style="width: 30%;  font-size: 17px; color: white; background-color: orange; border-radius: 13px; margin-left: 170%; margin-top: -8%; position: absolute;" >Deixar de Seguir <img src="./images/delete-friend.png" style="width: 9%; height: 9%;"></button>
+
+            </div>
+
+            <img src="./images/Xbox-Series-X-Logo-scaled-removebg-preview.png" style="width: 18%; height: 22%; margin-top: 34%; margin-left: -12.6%; position:absolute;">
+
+            <div id="xboxseriesxandsfunctions" style="position: absolute; margin-left: 12%; margin-top: 22%;">
+
+              <h2>Xbox Series X/S</h2>
+              <button id="followxboxseriesxs" onclick="followxboxseriesxs()" style="width: 30%; font-size: 17px; color: white; background-color: lightblue; border-radius: 13px; margin-left: 170%; margin-top: -8%;" >Seguir <img src="./images/add.png" style="width: 9%; height: 9%;"></button>
+              <button id="unfollowxboxseriesxs" onclick="unfollowxboxseriesxs()" style="width: 30%;  font-size: 17px; color: white; background-color: orange; border-radius: 13px; margin-left: 170%; margin-top: -8%; position: absolute;" >Deixar de Seguir <img src="./images/delete-friend.png" style="width: 9%; height: 9%;"></button>
+
+            </div>
+
+
+            <img src="./images/apple-white-250s.png" style="width: 11%; height: 20%; margin-top: 44%; margin-left: -9.3%; position:absolute;">
+
+            <div id="macosiosfunctions" style="position: absolute; margin-left: 12%; margin-top: 32%;">
+
+              <h2>MacOS / iOS</h2>
+              <button id="followmacosios" onclick="followmacosios()" style="width: 30%; font-size: 17px; color: white; background-color: lightblue; border-radius: 13px; margin-left: 170%; margin-top: -8%;" >Seguir <img src="./images/add.png" style="width: 9%; height: 9%;"></button>
+              <button id="unfollowmacosios" onclick="unfollowmacosios()" style="width: 30%; font-size: 17px; color: white; background-color: orange; border-radius: 13px; margin-left: 170%; margin-top: -8%; position: absolute;" >Deixar de Seguir <img src="./images/delete-friend.png" style="width: 9%; height: 9%;"></button>
+
+            </div>
+
+            <img src="./images/Android-logo-white.png" style="width: 11%; height: 20%; margin-top: 54%; margin-left: -9.3%; position:absolute;">
+
+            <div id="androidfunctions" style="position: absolute; margin-left: 12%; margin-top: 41%;">
+
+              <h2>Android</h2>
+              <button id="followandroid" onclick="followandroid()" style="width: 30%; font-size: 17px; color: white; background-color: lightblue; border-radius: 13px; margin-left: 170%; margin-top: -8%;" >Seguir <img src="./images/add.png" style="width: 9%; height: 9%;"></button>
+              <button id="unfollowandroid" onclick="unfollowandroid()" style="width: 30%; font-size: 17px; color: white; background-color: orange; border-radius: 13px; margin-left: 170%; margin-top: -8%; position: absolute;" >Deixar de Seguir <img src="./images/delete-friend.png" style="width: 9%; height: 9%;"></button>
+
+            </div>
+
+        </div>-->
+
+
+
+    </div>
+
+   
+   
+  </div>
+
+<nav class="main-menu">
+
+  
+  <div>
+     <a class="logo" href="http://startific.com">
+     </a> 
+   </div> 
+ <div class="settings"></div>
+ <div class="scrollbar" id="style-1">
+       
+ <ul>
+   
+ <li>                                   
+ <a href="secondpagetest.html">
+ <i class="fa fa-home fa-lg"></i>
+ <span class="nav-text">Home</span>
+ </a>
+ </li>   
+    
+ <li>                                 
+ <a href="descobrirjogos.html">
+ <i class="fa fa-user fa-lg"></i>
+ <span class="nav-text">Descobrir Jogos</span>
+ </a>
+ </li>   
+ 
+     
+ <li>                                 
+ <a href="livraria.html">
+ <i class="fa fa-envelope-o fa-lg"></i>
+ <span class="nav-text">Livraria</span>
+ </a>
+ </li>   
+   
+ 
+ 
+  
+ <li>
+ <a href="wishlist.html">
+ <i class="fa fa-heart-o fa-lg"></i>
+                         
+ <span class="nav-text">Wishlist</span>
+ 
+ 
+ <li>
+  <a href="favoritos.html">
+  <i class="fa fa-clock-o fa-lg"></i>
+  <span class="nav-text">Favoritos</span>
+  </a>
+  </li>
+ 
+  <li>
+    <a href="plataformas.html">
+    <i class="fa fa-desktop fa-lg"></i>
+    <span class="nav-text">Plataformas</span>
+    </a>
+    </li>
+  
+    <li>
+      <a href="aminhaconta.html">
+      <i class="fa fa-plane fa-lg"></i>
+      <span class="nav-text">A Minha Conta</span>
+      </a>
+      </li>
+
+      <li>
+        <a href="register.html">
+        <i class="fa fa-shopping-cart"></i>
+         <span class="nav-text">Logout</span>
+        </a>
+        </li>
+   
+ </div>
+ 
+         </nav>
+
+         <div id="organize10">
+
+
+
+        
+        </div>
+
+         <script>
+
+          //FUNCAO DE QUANDO A PAGINA ABRIR. É EXTREMAMENTE IMPORTANTE ADAPTAR O ESTILO DOS BOTÕES AS PLATAFORMAS QUE JÁ SÃO SEGUIDAS OU NÃO.
+
+          window.onload = function adaptarBotoes() {
+
+            var utilizador_name = sessionStorage.getItem("utilizador_name");
+            var utilizador_dinheiro = sessionStorage.getItem("utilizador_dinheiro");
+            var utilizador_email = sessionStorage.getItem("utilizador_email");
+            var utilizador_id = sessionStorage.getItem("utilizador_id");
+
+            getAllPlatforms();
+
+            /*COMO FUNCIONA A ADAPTAÇÃO ? -> SÃO BUSCADOS AS PLATAFORMAS SEGUIDAS POR UM USER. OS RESULTADOS OBTIDOS ADAPTAM O BOTÃO PARA O 'Deixar de seguir'. Os restantes adaptam o botão 'Seguir'.
+
+            document.getElementById("followpcandlaptop").style.visibility = "hidden";
+
+            document.getElementById("unfollowpcandlaptop").style.visibility = "hidden";
+
+            document.getElementById("followplaystation").style.visibility = "hidden";
+
+                document.getElementById("unfollowplaystation").style.visibility = "hidden";
+
+                document.getElementById("followxboxone360").style.visibility = "hidden";
+
+            document.getElementById("unfollowxboxone360").style.visibility = "hidden";
+
+            document.getElementById("followxboxseriesxs").style.visibility = "hidden";
+
+                document.getElementById("unfollowxboxseriesxs").style.visibility = "hidden";
+
+                document.getElementById("followmacosios").style.visibility = "hidden";
+
+                document.getElementById("unfollowmacosios").style.visibility = "hidden";
+
+                document.getElementById("followandroid").style.visibility = "hidden";
+
+                document.getElementById("unfollowandroid").style.visibility = "hidden";*/
+
+
+                //A TERMINAR...
+
+          }
+
+          //PASSO 1 -> OBTER TODAS AS PLATAFORMAS DE JOGO DISPONIVEIS
+
+          async function getAllPlatforms(){
+
+console.log("Obtendo todas as plataformas")
+
+// let recipeName = document.getElementById("nome1")
+ let platformsElem = document.getElementById("organize10");
+ var utilizador_id = sessionStorage.getItem("utilizador_id");
+ console.log("setItem->userId = " + utilizador_id);
+
+try{
+
+let games = await $.ajax({
+
+url: "/games/allplataforms/",
+method: "get",
+dataType: "json",
+
+});
+
+//GET DE PLATAFORMAS VERIFICADAS
+
+let gamesverified = await $.ajax({
+
+url: "/games/allplataforms/verified/" + utilizador_id,
+method: "get",
+dataType: "json",
+  
+});
+
+
+console.log("[utilizador] utilizador= " + JSON.stringify(gamesverified));
+
+console.log("[utilizador] utilizador = " + JSON.stringify(games));
+
+let htmlnotmarked = "";
+
+let html = "";
+
+//IRÁ SER COLOCADO 1 FOR PARA VERIFICAR SE EXISTE ALGUMA PLATAFORMA JÁ SEGUIDA. SE SIM, ADAPTA UM DETERMINADO HTML, CASO CONTRÁRIO, ADAPTA OUTRO HTML (COM OUTRO BOTÃO)
+for(let game of games){
+
+  for(let gameverified of gamesverified) {
+
+console.log("Verified Platforms: " + gameverified);
+
+ if(game.plataforma_id == gameverified.plataforma_identifier){
+
+  html += createplatformHTMLVerified(gameverified);
+
+//  break;
+
+ } else {
+
+  console.log("Nothing to show here...");
+  break;
+
+ }
+
+
+ console.log("VERIFIED: " + gameverified.plataforma_name)
+
+ console.log("Jogo: " + game.plataforma_name); 
+
+ var utilizador_identifier = sessionStorage.getItem("utilizador_id");
+ var plataforma_identifier = game.plataforma_id;
+ 
+  }
+
+  html += createplatformHTML(game);
+
+  
+
+}
+
+console.log("OBTEVE");
+
+platformsElem.innerHTML = html;
+
+//  recipeName.innerHTML = html;
+
+///////////////////////////////////////////////////////////////gamesElem.innerHTML = html;
+
+
+} catch(err){
+ console.log(err);
+}
+}
+
+function createplatformHTMLVerified(jogo){
+
+return "<div class='selectbox88' id='selectbox88'>" + "<h1 style='color: black; margin-left:2%; margin-top:2.6%; color:red;'><b>" + jogo.plataforma_name + "</b></h1>" + "<button style='margin-top: 22.5%; visibility: hidden;  margin-left: 60%;' onclick='followplatform(" + JSON.stringify(jogo) + ")' id='followbutton'>" + "SEGUIR" + "</button>" + "<button style='margin-top: -9.5%;   margin-left: 30%;' onclick='unfollowplatform(" + JSON.stringify(jogo) + ")' id='unfollowbutton'>" + "N. SEGUIR" + "</button>" + "</div>"
+
+}
+
+
+function createplatformHTML(jogo){
+
+return "<div class='selectbox88' id='selectbox88'>" + "<h1 style='color: black; margin-left:2%; margin-top:2.6%;'><b>" + jogo.plataforma_name + "</b></h1>" + "<button style='margin-top: 22.5%; margin-left: 60%;' onclick='followplatform(" + JSON.stringify(jogo) + ")' id='followbutton'>" + "SEGUIR" + "</button>" + "<button style='margin-top: -9.5%; visibility: hidden; margin-left: 30%;' onclick='unfollowplatform(" + JSON.stringify(jogo) + ")' id='unfollowbutton'>" + "N. SEGUIR" + "</button>" + "</div>"
+
+}
+
+async function unfollowplatform(jogo){
+
+try {
+
+ let games = await $.ajax({
+
+   url: "/games/unfollowplatform/" + jogo.plataforma_id_follow,
+   method: "delete",
+   dataType: "json",
+
+});
+
+console.log("Platform Game with id: " + jogo.plataforma_id_follow);
+
+} catch (err){
+ console.log(err);
+}
+
+
+}
+
+async function followplatform(jogo){
+
+  try {
+
+    var utilizador_identifier = sessionStorage.getItem("utilizador_id");
+
+     let data = {
+
+      plataforma_user_id: utilizador_identifier,
+      // wishlist_jogo_id: jogo_id
+      plataforma_identifier: jogo.plataforma_id,
+
+     }
+
+     let newWishlistGame = await $.ajax({
+
+      url: "/games/followplatform",
+      method: "post",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      dataType: "json"
+
+
+      });
+      console.log(newWishlistGame);
+ 
+ } catch (err) {
+ 
+ console.log(err);
+
+}
+}
+
+
+
+          //FOLLOW AND UNFOLLOW BUTTON CLICKS
+
+              function followpcandlaptop(){
+
+                document.getElementById("followpcandlaptop").style.visibility = "hidden";
+
+                document.getElementById("unfollowpcandlaptop").style.visibility = "visible";
+
+
+              }
+
+              function unfollowpcandlaptop(){
+
+                document.getElementById("unfollowpcandlaptop").style.visibility = "hidden";
+
+                document.getElementById("followpcandlaptop").style.visibility = "visible";
+
+
+              }
+
+              function followplaystation(){
+
+                document.getElementById("followplaystation").style.visibility = "hidden";
+
+                document.getElementById("unfollowplaystation").style.visibility = "visible";
+
+              }
+
+              function unfollowplaystation(){
+
+                document.getElementById("followplaystation").style.visibility = "visible";
+
+                document.getElementById("unfollowplaystation").style.visibility = "hidden";
+
+
+              }
+
+
+              function followxboxone360(){
+
+                //DEFINIR OS POSTS PARA O CLIQUE
+
+                document.getElementById("followxboxone360").style.visibility = "hidden";
+
+                document.getElementById("unfollowxboxone360").style.visibility = "visible";
+
+              }
+
+              function unfollowxboxone360(){
+
+                document.getElementById("followxboxone360").style.visibility = "visible";
+
+                document.getElementById("unfollowxboxone360").style.visibility = "hidden";
+
+              }
+
+              function followxboxseriesxs(){
+
+                document.getElementById("followxboxseriesxs").style.visibility = "hidden";
+
+                document.getElementById("unfollowxboxseriesxs").style.visibility = "visible";
+
+              }
+
+              function unfollowxboxseriesxs(){
+
+                document.getElementById("followxboxseriesxs").style.visibility = "visible";
+
+                document.getElementById("unfollowxboxseriesxs").style.visibility = "hidden";
+
+              }
+
+              function followmacosios(){
+
+                document.getElementById("followmacosios").style.visibility = "hidden";
+
+                document.getElementById("unfollowmacosios").style.visibility = "visible";
+
+              }
+
+              function unfollowmacosios(){
+
+                document.getElementById("followmacosios").style.visibility = "visible";
+
+                document.getElementById("unfollowmacosios").style.visibility = "hidden";
+
+              }
+
+              function followandroid(){
+
+                document.getElementById("followandroid").style.visibility = "hidden";
+
+                document.getElementById("unfollowandroid").style.visibility = "visible";
+
+              }
+
+              function unfollowandroid(){
+
+                document.getElementById("followandroid").style.visibility = "visible";
+
+                document.getElementById("unfollowandroid").style.visibility = "hidden";
+
+              }
+
+              
+
+           /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+           /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+function filterFunction2() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+           /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction3() {
+  document.getElementById("myDropdown3").classList.toggle("show");
+}
+
+function filterFunction3() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+          /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction4() {
+  document.getElementById("myDropdown4").classList.toggle("show");
+}
+
+function filterFunction4() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+
+         </script>
+
+        </body>
+
+</html>

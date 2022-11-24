@@ -1,0 +1,595 @@
+<html>
+
+<head>
+  <title>Express 2</title>
+  <link rel="stylesheet" href="stylesheets/mainpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/15e6590408.js" crossorigin="anonymous"></script>
+
+  <a href="secondpagetest.html" style="">
+
+    <img src="./images/tftlogo-removebg-preview.png" style="width: 8%; height: 19%; position:absolute; margin-top: -3.4%;">
+
+  </a>
+  <div class="topnav" id="myTopnav" style="width: 1550px; margin-left: -4%; margin-top: -0.6%;">
+    <div class="items" style="margin-left: 76%;">
+     
+    <a href="secondpagetest.html" class="active" style="">Home</a>
+    <a href="#news" style="">Avaliar</a>
+    <a href="#contact" style="">Contacto</a>
+    <a href="#about" style="">Sobre Nós</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    </div>
+  </div>
+
+</head>
+
+<body>
+
+  <!-- FILTER DROPDOWN'S -->
+
+  <div class="dropdown" style="position:absolute; margin-left: 52%; margin-top: 4.7%;">
+    <button onclick="myFunction()" class="dropbtn">Género</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a href="#about">Ação
+
+        <i class="fa-solid fa-gun"></i>
+
+      </a>
+      <a href="#base">Indie
+
+        <i class="fa-solid fa-face-smile"></i>
+
+      </a>
+      <a href="#blog">Aventura
+
+        <i class="fa-solid fa-map"></i>
+
+      </a>
+      <a href="#contact">RPG
+
+        <i class="fa-solid fa-gem"></i>
+
+      </a>
+      <a href="#custom">Estratégia
+
+        <i class="fa-solid fa-chess"></i>
+
+      </a>
+      <a href="#support">Tiro
+
+        <i class="fa-solid fa-bullseye"></i>
+
+      </a>
+      <a href="#tools">Casual
+
+        <i class="fa-solid fa-gamepad"></i>
+
+      </a>
+
+      <a href="#tools">Simulador
+
+        <i class="fa-solid fa-vr-cardboard"></i>
+
+      </a>
+
+      <a href="#tools">Puzzle
+
+        <i class="fa-solid fa-puzzle-piece"></i>
+
+      </a>
+
+      <a href="#tools">Arcade
+
+        <i class="fa-solid fa-ghost"></i>
+
+      </a>
+
+      <a href="#tools">Plataforma
+
+        <i class="fa-solid fa-compass"></i>
+
+      </a>
+
+      <a href="#tools">Corrida
+
+        <i class="fa-solid fa-car"></i>
+
+      </a>
+
+      <a href="#tools">MMO
+
+        <i class="fa-solid fa-khanda"></i>
+
+      </a>
+
+      <a href="#tools">Desporto
+
+        <i class="fa-solid fa-futbol"></i>
+
+      </a>
+
+      <a href="#tools">Luta
+
+        <i class="fa-solid fa-user-ninja"></i>
+
+      </a>
+
+      <a href="#tools">Familiar
+
+        <i class="fa-solid fa-people-roof"></i>
+
+      </a>
+
+      <a href="#tools">Tabuleiro
+
+        <i class="fa-solid fa-chess-board"></i>
+
+      </a>
+
+      <a href="#tools">Educacional
+
+        <i class="fa-solid fa-chalkboard-user"></i>
+
+      </a>
+
+      <a href="#tools">Cartas
+
+        <i class="fa-solid fa-diamond"></i>
+
+      </a>
+    </div>
+  </div>
+
+  <!--FILTRO POR PLATAFORMAS-->
+
+  <div class="dropdown" style="position:absolute; margin-left: 60%; margin-top: 4.7%;">
+    <button onclick="myFunction2()" class="dropbtn2">Plataforma</button>
+    <div id="myDropdown2" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a href="#about">PC
+
+        <i class="fa-solid fa-laptop"></i>
+
+      </a>
+      <a href="#base">PlayStation 5
+
+        <i class="fa-brands fa-playstation"></i>
+
+      </a>
+      <a href="#blog">PlayStation 4
+
+        <i class="fa-brands fa-playstation"></i>
+
+      </a>
+      <a href="#contact">XBox One
+
+        <i class="fa-brands fa-xbox"></i>
+
+      </a>
+      <a href="#custom">XBox Series S/X
+
+        <i class="fa-brands fa-xbox"></i>
+
+      </a>
+      <a href="#support">Nintendo Switch
+
+        <i class="fa-solid fa-n"></i>
+
+      </a>
+      <a href="#tools">iOS
+
+        <i class="fa-brands fa-app-store-ios"></i>
+
+      </a>
+
+      <a href="#tools">Android
+
+        <i class="fa-brands fa-android"></i>
+
+      </a>
+
+      <a href="#tools">Nintendo 3DS
+
+        <i class="fa-solid fa-n"></i>
+
+      </a>
+
+      <a href="#tools">Nintendo DS
+
+        <i class="fa-solid fa-n"></i>
+
+      </a>
+
+      <a href="#tools">macOS
+
+        <i class="fa-brands fa-apple"></i>
+
+      </a>
+
+      <a href="#tools">Linux
+
+        <i class="fa-brands fa-linux"></i>
+
+      </a>
+
+      <a href="#tools">XBox 360
+
+        <i class="fa-brands fa-xbox"></i>
+
+      </a>
+
+      <a href="#tools">XBox
+
+        <i class="fa-brands fa-xbox"></i>
+
+      </a>
+
+      <a href="#tools">PlayStation 3
+
+        <i class="fa-brands fa-playstation"></i>
+
+      </a>
+
+      <a href="#tools">Wii U
+
+        <i class="fa-solid fa-w"></i>
+
+      </a>
+
+      <a href="#tools">Wii
+
+        <i class="fa-solid fa-w"></i>
+
+      </a>
+
+      <a href="#tools">Browser
+
+        <i class="fa-brands fa-edge"></i>
+
+      </a>
+
+      <a href="#tools">Web
+
+        <i class="fa-solid fa-desktop"></i>
+
+      </a>
+    </div>
+  </div>
+
+  <div class="dropdown" style="position:absolute; margin-left: 70%; margin-top: 4.7%;">
+    <button onclick="myFunction3()" class="dropbtn3">Lançamento</button>
+    <div id="myDropdown3" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction3()">
+      <a href="#about">Mais Recentes
+
+        <i class="fa-solid fa-plus"></i>
+
+      </a>
+
+      <a href="#about">Mais Antigos
+
+        <i class="fa-solid fa-minus"></i>
+
+      </a>
+      
+    </div>
+  </div>
+
+  <div class="dropdown" style="position:absolute; margin-left: 80%; margin-top: 4.7%;">
+    <button onclick="myFunction4()" class="dropbtn4">Avaliação</button>
+    <div id="myDropdown4" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction4()">
+      <a href="#about">Melhor Avaliação
+
+        <i class="fa-solid fa-plus"></i>
+
+      </a>
+
+      <a href="#about">Pior Avaliação
+
+        <i class="fa-solid fa-minus"></i>
+
+      </a>
+      
+    </div>
+  </div>
+
+  <div style="background-color: rgb(54, 54, 54); width: 96.6%; height: 230%; margin-left: 3%;">
+
+
+    <div id="jogosrecentes">
+
+     <h2 style="position: absolute; margin-top: 5%; margin-left: 3%; font-size: 30px;">Wishlist</h2>
+
+     <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 8.4%; margin-left: 3%;">
+
+    </div>
+
+   
+   
+  </div>
+
+<nav class="main-menu">
+
+  
+  <div>
+     <a class="logo" href="http://startific.com">
+     </a> 
+   </div> 
+ <div class="settings"></div>
+ <div class="scrollbar" id="style-1">
+       
+ <ul>
+   
+ <li>                                   
+ <a href="secondpagetest.html">
+ <i class="fa fa-home fa-lg"></i>
+ <span class="nav-text">Home</span>
+ </a>
+ </li>   
+    
+ <li>                                 
+ <a href="descobrirjogos.html">
+ <i class="fa fa-user fa-lg"></i>
+ <span class="nav-text">Descobrir Jogos</span>
+ </a>
+ </li>   
+ 
+     
+ <li>                                 
+ <a href="livraria.html">
+ <i class="fa fa-envelope-o fa-lg"></i>
+ <span class="nav-text">Livraria</span>
+ </a>
+ </li>   
+   
+ 
+ 
+  
+ <li>
+ <a href="wishlist.html">
+ <i class="fa fa-heart-o fa-lg"></i>
+                         
+ <span class="nav-text">Wishlist</span>
+ 
+ 
+ <li>
+  <a href="favoritos.html">
+  <i class="fa fa-clock-o fa-lg"></i>
+  <span class="nav-text">Favoritos</span>
+  </a>
+  </li>
+ 
+  <li>
+    <a href="plataformas.html">
+    <i class="fa fa-desktop fa-lg"></i>
+    <span class="nav-text">Plataformas</span>
+    </a>
+    </li>
+  
+    <li>
+      <a href="aminhaconta.html">
+      <i class="fa fa-plane fa-lg"></i>
+      <span class="nav-text">A Minha Conta</span>
+      </a>
+      </li>
+
+      <li>
+        <a href="register.html">
+        <i class="fa fa-shopping-cart"></i>
+         <span class="nav-text">Logout</span>
+        </a>
+        </li>
+   
+ </div>
+ 
+         </nav>
+
+         <!-- ORGANIZE DE WISHLIST -->
+
+         <div id="organize2">
+
+
+
+         </div>
+
+         <script>
+
+          window.onload = function exampleFunction() {
+            console.log('The Script will load now.');
+
+            var utilizador_name = sessionStorage.getItem("utilizador_name");
+            var utilizador_dinheiro = sessionStorage.getItem("utilizador_dinheiro");
+            var utilizador_email = sessionStorage.getItem("utilizador_email");
+            var utilizador_id = sessionStorage.getItem("utilizador_id");
+
+            console.log(utilizador_name);
+
+            //GET DOS JOGOS
+
+            getGamesWishlist();
+
+            
+
+           }
+
+           async function removewishlist(wishlist_game){
+
+             try {
+
+              let games = await $.ajax({
+
+                url: "/games/deletewishlist/" + wishlist_game.wishlist_id,
+                method: "delete",
+                dataType: "json",
+
+             });
+
+             console.log("Wishlist Game with id: " + wishlist_game.wishlist_id);
+
+             } catch (err){
+              console.log(err);
+             }
+
+
+           }
+
+           async function getGamesWishlist(){
+
+console.log("Obtendo os jogos")
+
+// let recipeName = document.getElementById("nome1")
+ let gamesElem = document.getElementById("organize2");
+ var utilizador_id = sessionStorage.getItem("utilizador_id");
+ console.log("setItem->userId = " + utilizador_id);
+
+try{
+
+let games = await $.ajax({
+
+url: "/games/wishlist/" + utilizador_id,
+method: "get",
+dataType: "json",
+
+});
+
+console.log("[utilizador] utilizador = " + JSON.stringify(games));
+
+let html = "";
+
+for(let game of games){
+ console.log("Jogo: " + game); //PORQUE DÁ ERRO?
+ html += createwishlistHTML(game);
+}
+
+
+console.log("OBTEVE");
+//  recipeName.innerHTML = html;
+
+gamesElem.innerHTML = html;
+
+
+} catch(err){
+ console.log(err);
+}
+}
+
+function createwishlistHTML(jogo){
+
+  console.log("ID de caixa: " + jogo.wishlist_id);
+  
+  return "<div class='selectbox55' id='selectbox55'>" + "<p name='gamename1' id='gamename1' style='text-align: center; font-size: 90%; margin-top: 10%;color:black;'><b>" + jogo.jogo_name + "</b></p>" + "<p name='gamereleased1' id='gamereleased1' style='text-align: center; font-size: 90%; margin-top: 22%;color:black;'>" + jogo.jogo_released + "</p>" + "<p name='rating1' id='rating1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_rating + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_downloads + "</p>" +  "<button style='margin-top: 5%; margin-left: 6%; visibility: visible;'>Comprar</button>" + "<button onclick='removewishlist(" + JSON.stringify(jogo) + ")' style='margin-top: 5%; margin-left: 40%; visibility: visible;'>Remover</button>" + "</div>"
+ 
+  // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+ /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA </p>*/
+
+}
+
+
+
+
+
+// MARCAR JOGO FAVORITO
+
+           /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+           /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+function filterFunction2() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+           /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction3() {
+  document.getElementById("myDropdown3").classList.toggle("show");
+}
+
+function filterFunction3() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+          /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction4() {
+  document.getElementById("myDropdown4").classList.toggle("show");
+}
+
+function filterFunction4() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+
+         </script>
+
+        </body>
+
+</html>

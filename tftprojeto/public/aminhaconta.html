@@ -1,0 +1,436 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express 2</title>
+  <link rel="stylesheet" href="stylesheets/mainpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+  <a href="secondpagetest.html" style="">
+
+    <img src="./images/tftlogo-removebg-preview.png" style="width: 8%; height: 19%; position:absolute; margin-top: -3.4%;">
+
+  </a>
+  <div class="topnav" id="myTopnav" style="width: 1550px; margin-left: -4%; margin-top: -0.6%;">
+    <div class="items" style="margin-left: 76%;">
+     
+    <a href="secondpagetest.html" class="active" style="">Home</a>
+    <a href="#news" style="">Avaliar</a>
+    <a href="#contact" style="">Contacto</a>
+    <a href="#about" style="">Sobre Nós</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    </div>
+  </div>
+
+</head>
+
+<body>
+
+  <div style="background-color: rgb(54, 54, 54); width: 96.6%; height: 230%; margin-left: 3%;">
+
+    <div>
+    <h1 id="hellouser2" style="position: absolute; margin-left: 3%; margin-top: 3%; font-size: 40px;">Olá, 'nome do utilizador'!</h1>
+    </div>
+
+    <!--BOTÃO DE TESTE-->
+
+    <a href="gametest8.html">
+
+      <button>Clique para testar!</button>
+
+    </a>
+
+    <div id="jogosrecentes">
+
+     <h2 style="position: absolute; margin-top: 9%; margin-left: 3%; font-size: 30px;">Informações da Conta</h2>
+
+     <h3 id="usernameshow" style="position: absolute; margin-top: 15%; margin-left: 3%; font-size: 20px;">Username: </h3>
+
+     <h3 id="emailshow" style="position: absolute; margin-top: 20%; margin-left: 3%; font-size: 20px;">Email: </h3>
+
+     <h3 id="tokenshow" style="position: absolute; margin-top: 25%; margin-left: 3%; font-size: 20px;">Tokens: </h3>
+
+     <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 12.4%; margin-left: 3%;">
+
+    </div>
+
+    <div id="jogosrecentesplataformas">
+
+      <h2 style="position: absolute; margin-top: 28%; margin-left: 3%; font-size: 30px;">Estatisticas</h2>
+
+      <div>
+      <h3 style="position: absolute; margin-top: 35%; margin-left: 3%; font-size: 20px;">Nº de Jogos Favoritos: </h3>
+
+      <h2 id="favoritosquantity" style="position: absolute; color:white; margin-top: 40%; margin-left: 3%; font-size: 100px;">34</h2>
+      <a href="favoritos.html">
+        
+      <button style="position: absolute; margin-top: 50%; margin-left: 3%;">Ver jogos Favoritos</button>
+      </a>
+      </div>
+
+      <div>
+      <h3 style="position: absolute; margin-top: 35%; margin-left: 23%; font-size: 20px;">Nº de Jogos na Wishlist: </h3>
+      <h2 id="wishlistquantity" style="position: absolute; color:white; margin-top: 40%; margin-left: 23%; font-size: 100px;">34</h2>
+      <a href="wishlist.html">
+      <button style="position: absolute; margin-top: 50%; margin-left: 23%;">Ver jogos da Wishlist</button>
+      </a>
+    </div>
+    <div>
+      <h3 style="position: absolute; margin-top: 35%; margin-left: 43%; font-size: 20px;">Nº de Jogos Comprados: </h3>
+      <h2 id="libraryquantity" style="position: absolute; color:white; margin-top: 40%; margin-left: 43%; font-size: 100px;">34</h2>
+      <a href="livraria.html">
+      <button style="position: absolute; margin-top: 50%; margin-left: 43%;">Ver Livraria</button>
+      </a>
+    </div>
+    <div>
+      <h3 style="position: absolute; margin-top: 35%; margin-left: 63%; font-size: 20px;">Jogos comprados recentemente: </h3>
+
+      <div id="organize5">
+
+        <!--DIV TEST OF BOUGHT GAME--> 
+        
+    
+
+      </div>
+    </div>
+      <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 31.4%; margin-left: 3%;"></div>
+
+    </div>
+
+    <div id="jogosdodia">
+
+      <h2 style="position: absolute; margin-top: 58%; margin-left: 3%; font-size: 30px;">Jogos do Dia</h2>
+
+      <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 61.4%; margin-left: 3%;"></div>
+
+    </div>
+
+    <div id="recentementejogados">
+
+      <h2 style="position: absolute; margin-top: 85%; margin-left: 3%; font-size: 30px;">Recentemente Jogados</h2>
+
+
+
+      <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 88.4%; margin-left: 3%;"></div>
+
+    </div>
+   
+  </div>
+
+<nav class="main-menu">
+
+  
+  <div>
+     <a class="logo" href="http://startific.com">
+     </a> 
+   </div> 
+ <div class="settings"></div>
+ <div class="scrollbar" id="style-1">
+       
+ <ul>
+   
+ <li>                                   
+ <a href="secondpagetest.html">
+ <i class="fa fa-home fa-lg"></i>
+ <span class="nav-text">Home</span>
+ </a>
+ </li>   
+    
+ <li>                                 
+ <a href="descobrirjogos.html">
+ <i class="fa fa-user fa-lg"></i>
+ <span class="nav-text">Descobrir Jogos</span>
+ </a>
+ </li>   
+ 
+     
+ <li>                                 
+ <a href="livraria.html">
+ <i class="fa fa-envelope-o fa-lg"></i>
+ <span class="nav-text">Livraria</span>
+ </a>
+ </li>   
+   
+ 
+ 
+  
+ <li>
+ <a href="wishlist.html">
+ <i class="fa fa-heart-o fa-lg"></i>
+                         
+ <span class="nav-text">Wishlist</span>
+ 
+ 
+ <li>
+  <a href="favoritos.html">
+  <i class="fa fa-clock-o fa-lg"></i>
+  <span class="nav-text">Favoritos</span>
+  </a>
+  </li>
+ 
+  <li>
+    <a href="plataformas.html">
+    <i class="fa fa-desktop fa-lg"></i>
+    <span class="nav-text">Plataformas</span>
+    </a>
+    </li>
+  
+    <li>
+      <a href="aminhaconta.html">
+      <i class="fa fa-plane fa-lg"></i>
+      <span class="nav-text">A Minha Conta</span>
+      </a>
+      </li>
+
+      <li>
+        <a href="register.html">
+        <i class="fa fa-shopping-cart"></i>
+         <span class="nav-text">Logout</span>
+        </a>
+        </li>
+   
+ </div>
+ 
+         </nav>
+
+         <script>
+
+           window.onload = function exampleFunction() {
+            console.log('The Script will load now.');
+
+            var utilizador_name = sessionStorage.getItem("utilizador_name");
+            var utilizador_dinheiro = sessionStorage.getItem("utilizador_dinheiro");
+            var utilizador_email = sessionStorage.getItem("utilizador_email");
+            let utilizador_id = sessionStorage.getItem("utilizador_id");
+            let id_user = parseInt(utilizador_id);
+
+            document.getElementById("hellouser2").innerHTML = "Olá, " + utilizador_name + " !";
+
+            document.getElementById("usernameshow").innerHTML = "Username: " + utilizador_name;
+
+            document.getElementById("emailshow").innerHTML = "Email: " + utilizador_email;
+
+            document.getElementById("tokenshow").innerHTML = "Tokens: " + utilizador_dinheiro;
+
+            countFavoriteQuantity();
+
+            countWishlistQuantity();
+
+            countLibraryQuantity();
+
+            getJogosRecentes();
+
+            //GET DE JOGOS RECENTES 
+
+            async function getJogosRecentes(){
+
+              let gamesElem = document.getElementById("organize5");
+              var utilizador_id = sessionStorage.getItem("utilizador_id");
+             console.log("setItem->userId = " + utilizador_id);
+
+             try {
+
+               let games = await $.ajax({
+
+               url: "/games/recent/" + id_user,
+               method: "get",
+               dataType: "json",
+
+             });
+
+             let html = "";
+
+             for(let game of games){
+               console.log("Game: " + game); //PORQUE DÁ ERRO?
+               html += creategameHTML(game);
+             }
+
+             gamesElem.innerHTML = html;
+
+ //console.log("[utilizador] utilizador = " + JSON.stringify(favorite_quantidade.count));
+
+ //document.getElementById("favoritosquantity").innerHTML = "" + number_quantity;
+
+ //console.log(favorite_quantidade);
+
+
+            } catch(err){
+                console.log(err);
+            }
+
+          }
+
+          function creategameHTML(jogo){ //TERMINAR
+
+console.log("ID de caixa: " + jogo.jogo_id);
+
+return "<div id='selectbox65' class='selectbox65' style='width: 97.9%; height: 17%; background-color: white; padding: 5px;'>" + "<h2 id='gamename' style='color: black; font-size: 15px;'>" + jogo.jogo_name + "</h2>" + "<h2 id='gamerating' style='color: black; font-size: 12px; margin-top: -1%;'>Rating: " + jogo.jogo_rating + "</h2>" + "<h2 id='gamereleased' style='color: black; font-size: 12px; margin-top: -5.9%; margin-left: 15%;'>Lançamento: " + jogo.jogo_released + "</h2>" + "<h2 id='gamedownloads' style='color: black; font-size: 12px; margin-top: -5.9%; margin-left: 69%;'>Downloads: " + jogo.jogo_downloads + "</h2>" + "</div>"
+
+
+
+// return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+/*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA </p>*/
+
+}
+
+            //GET DO NUMERO DE JOGOS FAVORITOS
+
+            async function countFavoriteQuantity(){
+
+            try {
+
+             let favorite_quantidade = await $.ajax({
+
+              url: "/games/favorite/quantity/" + id_user,
+              method: "get",
+              dataType: "json",
+
+             });
+
+             let html = "";
+
+             for(let fav of favorite_quantidade){
+              console.log("Fav: " + fav); //PORQUE DÁ ERRO?
+              html += createquantityfavHTML(fav);
+             }
+
+             //console.log("[utilizador] utilizador = " + JSON.stringify(favorite_quantidade.count));
+
+             //document.getElementById("favoritosquantity").innerHTML = "" + number_quantity;
+
+             //console.log(favorite_quantidade);
+
+
+            } catch(err){
+              console.log(err);
+            }
+
+          }
+
+
+            //GET DO NUMERO DE JOGOS WISHLIST
+
+            async function countWishlistQuantity(){
+
+try {
+
+ let wishlist_quantidade = await $.ajax({
+
+  url: "/games/wishlist/quantity/" + id_user,
+  method: "get",
+  dataType: "json",
+
+ });
+
+ let html = "";
+
+ for(let wish of wishlist_quantidade){
+  console.log("Wish: " + wish); //PORQUE DÁ ERRO?
+  html += createquantitywishlistHTML(wish);
+ }
+
+ //console.log("[utilizador] utilizador = " + JSON.stringify(favorite_quantidade.count));
+
+ //document.getElementById("favoritosquantity").innerHTML = "" + number_quantity;
+
+ //console.log(favorite_quantidade);
+
+
+} catch(err){
+  console.log(err);
+}
+
+}
+
+
+            //GET DO NUMERO DE JOGOS COMPRADOS
+
+            async function countLibraryQuantity(){
+
+try {
+
+ let library_quantidade = await $.ajax({
+
+  url: "/games/library/quantity/" + id_user,
+  method: "get",
+  dataType: "json",
+
+ });
+
+ let html = "";
+
+ for(let lib of library_quantidade){
+  console.log("Lib: " + lib); //PORQUE DÁ ERRO?
+  html += createquantitylibraryHTML(lib);
+ }
+
+ //console.log("[utilizador] utilizador = " + JSON.stringify(favorite_quantidade.count));
+
+ //document.getElementById("favoritosquantity").innerHTML = "" + number_quantity;
+
+ //console.log(favorite_quantidade);
+
+
+} catch(err){
+  console.log(err);
+}
+
+}
+           
+        }
+
+        function createquantitywishlistHTML(wishlist){
+
+console.log("ID do wishlist: " + wishlist.count);
+
+document.getElementById("wishlistquantity").innerHTML = wishlist.count;
+
+//return "<div class='selectbox55' id='selectbox55'>" + "<p name='gamename1' id='gamename1' style='text-align: center; font-size: 90%; margin-top: 10%;color:black;'><b>" + jogo.jogo_name + "</b></p>" + "<p name='gamereleased1' id='gamereleased1' style='text-align: center; font-size: 90%; margin-top: 22%;color:black;'>" + jogo.jogo_released + "</p>" + "<p name='rating1' id='rating1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_rating + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_downloads + "</p>" +  "<button style='margin-top: 5%; margin-left: 6%; visibility: visible;'>Comprar</button>" + "<button onclick='removewishlist(" + JSON.stringify(jogo) + ")' style='margin-top: 5%; margin-left: 40%; visibility: visible;'>Remover</button>" + "</div>"
+
+// return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+/*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA </p>*/
+
+}
+
+        function createquantityfavHTML(favorite){
+
+console.log("ID do favorito: " + favorite.count);
+
+document.getElementById("favoritosquantity").innerHTML = favorite.count;
+
+//return "<div class='selectbox55' id='selectbox55'>" + "<p name='gamename1' id='gamename1' style='text-align: center; font-size: 90%; margin-top: 10%;color:black;'><b>" + jogo.jogo_name + "</b></p>" + "<p name='gamereleased1' id='gamereleased1' style='text-align: center; font-size: 90%; margin-top: 22%;color:black;'>" + jogo.jogo_released + "</p>" + "<p name='rating1' id='rating1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_rating + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_downloads + "</p>" +  "<button style='margin-top: 5%; margin-left: 6%; visibility: visible;'>Comprar</button>" + "<button onclick='removewishlist(" + JSON.stringify(jogo) + ")' style='margin-top: 5%; margin-left: 40%; visibility: visible;'>Remover</button>" + "</div>"
+
+// return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+/*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA </p>*/
+
+}
+
+function createquantitylibraryHTML(libraryy){
+
+console.log("ID do lib: " + libraryy.count);
+
+document.getElementById("libraryquantity").innerHTML = libraryy.count;
+
+//return "<div class='selectbox55' id='selectbox55'>" + "<p name='gamename1' id='gamename1' style='text-align: center; font-size: 90%; margin-top: 10%;color:black;'><b>" + jogo.jogo_name + "</b></p>" + "<p name='gamereleased1' id='gamereleased1' style='text-align: center; font-size: 90%; margin-top: 22%;color:black;'>" + jogo.jogo_released + "</p>" + "<p name='rating1' id='rating1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_rating + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_downloads + "</p>" +  "<button style='margin-top: 5%; margin-left: 6%; visibility: visible;'>Comprar</button>" + "<button onclick='removewishlist(" + JSON.stringify(jogo) + ")' style='margin-top: 5%; margin-left: 40%; visibility: visible;'>Remover</button>" + "</div>"
+
+// return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+/*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA </p>*/
+
+}
+          
+
+         </script>
+
+        </body>
+
+</html>

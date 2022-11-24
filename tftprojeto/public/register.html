@@ -1,0 +1,187 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.F.T: Welcome</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+    <link rel = "stylesheet" href = "stylesheets/normalize.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "stylesheets/registerlogin.css">
+
+    <script src="./javascripts/user.js"></script>
+
+    <script src="/tftproject/models/usersModel.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    
+
+
+
+
+
+     <!-- Boxicons CSS -->
+     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <script type="module"></script>
+
+    <img src="./images/8b86826a89dac1f5e0e23eb01c30f08b.jpg" style="position: absolute; width: 100%; height: 100%;">
+
+<!--REGISTER & LOGIN FORM-->
+
+<section class="container forms">
+    <div class="form login">
+        <div class="form-content">
+            <header>Registo</header>
+            <form action="#">
+                <div class="field input-field">
+                    <input type="text" id="fusername" name="fusername" placeholder="Como te devemos chamar?" class="input" required>
+                </div>
+
+                <div class="field input-field">
+                    <input type="email" id="femail" name="femail" placeholder="Insere o teu email preferido" class="input" required>
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" id="fpassword" name="fpassword" placeholder="Insere a tua password secreta" class="input" required>
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+
+                
+                <!--onclick="registreamento()" NO BOTÃO-->
+
+
+                <a href="#">
+                    <input class="field button-field" type="button" onclick="registreamento()" value="REGISTAR" style="border: 0px; background-color: blue; color: white;">
+                </a>
+
+            
+                    <!---<button onclick="advise()">LOG ADVISE</button> -->
+
+                
+
+               <!--- <div class="field button-field">
+                    <button>Registar</button>
+                </div> -->
+            </form>
+
+            <div class="form-link">
+                <span>Já tens uma conta? <a href="registerorlogin.html" class="link signup-link">Login</a></span>
+            </div>
+        </div>
+
+        
+
+       
+
+    </div>
+
+    <!-- Signup Form -->
+
+    <div class="form signup">
+        <div class="form-content">
+            <header>Signup</header>
+            <form action="#">
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input">
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" placeholder="Create password" class="password">
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" placeholder="Confirm password" class="password">
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+
+                <div class="field button-field">
+                    <button>Signup</button>
+                </div>
+            </form>
+
+            <div class="form-link">
+                <span>Already have an account? <a href="registerorlogin.html" class="link login-link">Login</a></span>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+       
+
+    </div>
+</section>
+
+<!-- JavaScript -->
+     <!---   <script src="javascripts/script.js"></script> -->
+
+     <script>
+        
+       
+
+       /* function hashpassword(){
+
+           
+
+        }*/
+
+        async function advise() {
+
+            console.log("Storing...");
+
+            try {
+
+                var jogo_name = "Test Game 9";
+                var jogo_released = "2014-04-25T00:00:00.000Z";
+                var jogo_rating = 94;
+                var jogo_preco = 43;
+                var jogo_downloads = 53271;
+                var jogo_desc = "This is a game test 9";
+                var jogo_link = "www.gametest9.com";
+
+
+              let data = {
+ 
+                jogo_name: jogo_name,
+                jogo_released: jogo_released,
+                jogo_rating: jogo_rating,
+                jogo_preco: jogo_preco,
+                jogo_downloads: jogo_downloads,
+                jogo_desc: jogo_desc,
+                jogo_link: jogo_link
+
+              }
+
+              let newGame = await $.ajax({
+
+                url: "/games/insertnewgame",
+                method: "post",
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                dataType: "json"
+
+               });
+
+            } catch (err) {
+
+                console.log(err);
+
+            }
+
+            console.log("Stored...");
+            
+        }
+
+     </script>
+
+</body>
+
+</html>

@@ -1,0 +1,511 @@
+<html>
+
+<head>
+  <title>Express 2</title>
+  <link rel="stylesheet" href="stylesheets/mainpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+  <a href="secondpagetest.html" style="">
+
+    <img src="./images/tftlogo-removebg-preview.png" style="width: 8%; height: 19%; position:absolute; margin-top: -3.4%;">
+
+  </a>
+  <div class="topnav" id="myTopnav" style="width: 1550px; margin-left: -4%; margin-top: -0.6%;">
+    <div class="items" style="margin-left: 76%;">
+     
+    <a href="secondpagetest.html" class="active" style="">Home</a>
+    <a href="#news" style="">Avaliar</a>
+    <a href="#contact" style="">Contacto</a>
+    <a href="#about" style="">Sobre Nós</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    </div>
+  </div>
+
+</head>
+
+<body>
+
+  <div style="background-color: rgb(54, 54, 54); width: 96.6%; height: 280%; margin-left: 3%;">
+
+    <div>
+    <h1 id="hellouser" style="position: absolute; margin-left: 3%; margin-top: 3%; font-size: 40px;">Olá, 'nome do utilizador'!</h1>
+    </div>
+
+    <div>
+      <h1 id="tokensuser" style="position: absolute; margin-left: 73%; margin-top: 3%; font-size: 40px;">Tokens: </h1>
+      </div>
+
+    <div id="jogosrecentes">
+
+      <div id="organize7" style="background-color: transparent;">
+
+
+       
+      </div>
+
+     <h2 style="position: absolute; margin-top: 9%; margin-left: 3%; font-size: 30px;">Jogos Recentes</h2>
+
+     <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 12.4%; margin-left: 3%;">
+
+      
+
+    </div>
+
+    <div id="jogosrecentesplataformas">
+
+      <h2 style="position: absolute; margin-top: 32%; margin-left: 3%; font-size: 30px;">Jogos Recentes das tuas Plataformas</h2>
+
+      <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 35.4%; margin-left: 3%;"></div>
+
+    </div>
+
+    <div id="maisbaixados">
+
+      <div id="organize8">
+
+
+       
+      </div>
+
+      <h2 style="position: absolute; margin-top: 58%; margin-left: 3%; font-size: 30px;">Mais Baixados</h2>
+
+      <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 61.4%; margin-left: 3%;"></div>
+
+    </div>
+
+    <div id="jogosgratisweb">
+
+      <div id="organize9">
+
+      </div>
+
+      <div id="organize10">
+
+      </div>
+
+      <div id="organize11">
+
+      </div>
+
+      <div id="organize12">
+
+      </div>
+
+      <h2 style="position: absolute; margin-top: 85%; margin-left: 3%; font-size: 30px;">Jogos Grátis (Web & Browser)</h2>
+
+      <div style="background-color:aliceblue; width:90%; height:0.1%; position:absolute; margin-top: 88.4%; margin-left: 3%;"></div>
+
+    </div>
+   
+   
+
+  </div>
+
+<nav class="main-menu">
+
+  
+  <div>
+     <a class="logo" href="http://startific.com">
+     </a> 
+   </div> 
+ <div class="settings"></div>
+ <div class="scrollbar" id="style-1">
+       
+ <ul>
+   
+ <li>                                   
+ <a href="secondpagetest.html">
+ <i class="fa fa-home fa-lg"></i>
+ <span class="nav-text">Home</span>
+ </a>
+ </li>   
+    
+ <li>                                 
+ <a href="descobrirjogos.html">
+ <i class="fa fa-user fa-lg"></i>
+ <span class="nav-text">Descobrir Jogos</span>
+ </a>
+ </li>   
+ 
+     
+ <li>                                 
+ <a href="livraria.html">
+ <i class="fa fa-envelope-o fa-lg"></i>
+ <span class="nav-text">Livraria</span>
+ </a>
+ </li>   
+   
+ 
+ 
+  
+ <li>
+ <a href="wishlist.html">
+ <i class="fa fa-heart-o fa-lg"></i>
+                         
+ <span class="nav-text">Wishlist</span>
+ 
+ 
+ <li>
+  <a href="favoritos.html">
+  <i class="fa fa-clock-o fa-lg"></i>
+  <span class="nav-text">Favoritos</span>
+  </a>
+  </li>
+ 
+  <li>
+    <a href="plataformas.html">
+    <i class="fa fa-desktop fa-lg"></i>
+    <span class="nav-text">Plataformas</span>
+    </a>
+    </li>
+  
+    <li>
+      <a href="aminhaconta.html">
+      <i class="fa fa-plane fa-lg"></i>
+      <span class="nav-text">A Minha Conta</span>
+      </a>
+      </li>
+
+      <li>
+        <a href="register.html">
+        <i class="fa fa-shopping-cart"></i>
+         <span class="nav-text">Logout</span>
+        </a>
+        </li>
+   
+ </div>
+ 
+         </nav>
+
+         <script>
+
+        window.onload = async function() {
+            console.log('The Script will load now.');
+            
+
+            var utilizador_name = sessionStorage.getItem("utilizador_name");
+            var utilizador_dinheiro = sessionStorage.getItem("utilizador_dinheiro");
+
+            console.log(utilizador_name);
+
+
+           // document.getElementById("hellouser").innerHTML = "Olá, " + utilizador_name + " !";
+
+           // document.getElementById("tokensuser").innerHTML = "Tokens: " + utilizador_dinheiro;
+
+            getGamesLatest();
+
+            getDownloadedGames();
+
+            getWebGameOne();
+
+            getWebGameTwo();
+
+            getWebGameThree();
+
+            getWebGameFour();
+
+            ////////////////// GET WEB GAME FOUR ///////////////////
+
+            async function getWebGameFour(){
+
+//Definir um array de possibilidade de jogos grátis
+
+var game1possibilities = ["https://www.freetogame.com/api/game?id=342", "https://www.freetogame.com/api/game?id=354", "https://www.freetogame.com/api/game?id=355", "https://www.freetogame.com/api/game?id=358", "https://www.freetogame.com/api/game?id=421", "https://www.freetogame.com/api/game?id=343", "https://www.freetogame.com/api/game?id=344"];
+
+var urlitem = game1possibilities[Math.floor(Math.random()*game1possibilities.length)];
+console.log("Obtendo os jogos ultimos 5 recentes");
+
+// let recipeName = document.getElementById("nome1")
+let gamesElem = document.getElementById("organize12");
+var utilizador_id = sessionStorage.getItem("utilizador_id");
+console.log("setItem->userId = " + utilizador_id);
+
+try{
+
+let games = await $.ajax({
+
+url: urlitem,
+method: "get",
+dataType: "json",
+
+});
+
+console.log("[utilizador] utilizador = " + JSON.stringify(games));
+
+let html = "";
+
+html += creategameoneHTML(games);
+
+
+console.log("OBTEVE");
+//  recipeName.innerHTML = html;
+
+gamesElem.innerHTML = html;
+
+
+} catch(err){
+console.log(err);
+}
+}
+
+            ////////////////// GET WEB GAME THREE //////////////////
+
+            async function getWebGameThree(){
+
+//Definir um array de possibilidade de jogos grátis
+
+var game1possibilities = ["https://www.freetogame.com/api/game?id=443", "https://www.freetogame.com/api/game?id=440", "https://www.freetogame.com/api/game?id=468", "https://www.freetogame.com/api/game?id=353", "https://www.freetogame.com/api/game?id=457", "https://www.freetogame.com/api/game?id=341", "https://www.freetogame.com/api/game?id=460"];
+
+var urlitem = game1possibilities[Math.floor(Math.random()*game1possibilities.length)];
+console.log("Obtendo os jogos ultimos 5 recentes");
+
+// let recipeName = document.getElementById("nome1")
+let gamesElem = document.getElementById("organize10");
+var utilizador_id = sessionStorage.getItem("utilizador_id");
+console.log("setItem->userId = " + utilizador_id);
+
+try{
+
+let games = await $.ajax({
+
+url: urlitem,
+method: "get",
+dataType: "json",
+
+});
+
+console.log("[utilizador] utilizador = " + JSON.stringify(games));
+
+let html = "";
+
+html += creategameoneHTML(games);
+
+
+console.log("OBTEVE");
+//  recipeName.innerHTML = html;
+
+gamesElem.innerHTML = html;
+
+
+} catch(err){
+console.log(err);
+}
+}
+
+            ////////////////// GET WEB GAME TWO /////////////////
+            async function getWebGameTwo(){
+
+//Definir um array de possibilidade de jogos grátis
+
+var game1possibilities = ["https://www.freetogame.com/api/game?id=522", "https://www.freetogame.com/api/game?id=433", "https://www.freetogame.com/api/game?id=532", "https://www.freetogame.com/api/game?id=471", "https://www.freetogame.com/api/game?id=472", "https://www.freetogame.com/api/game?id=463", "https://www.freetogame.com/api/game?id=535"];
+
+var urlitem = game1possibilities[Math.floor(Math.random()*game1possibilities.length)];
+console.log("Obtendo os jogos ultimos 5 recentes");
+
+// let recipeName = document.getElementById("nome1")
+let gamesElem = document.getElementById("organize11");
+var utilizador_id = sessionStorage.getItem("utilizador_id");
+console.log("setItem->userId = " + utilizador_id);
+
+try{
+
+let games = await $.ajax({
+
+url: urlitem,
+method: "get",
+dataType: "json",
+
+});
+
+console.log("[utilizador] utilizador = " + JSON.stringify(games));
+
+let html = "";
+
+html += creategameoneHTML(games);
+
+
+console.log("OBTEVE");
+//  recipeName.innerHTML = html;
+
+gamesElem.innerHTML = html;
+
+
+} catch(err){
+console.log(err);
+}
+}
+            
+
+            ////////////////// GET WEB GAME ONE /////////////////
+
+            async function getWebGameOne(){
+
+              //Definir um array de possibilidade de jogos grátis
+
+              var game1possibilities = ["https://www.freetogame.com/api/game?id=345", "https://www.freetogame.com/api/game?id=427", "https://www.freetogame.com/api/game?id=340", "https://www.freetogame.com/api/game?id=445", "https://www.freetogame.com/api/game?id=347", "https://www.freetogame.com/api/game?id=380", "https://www.freetogame.com/api/game?id=458"];
+
+              var urlitem = game1possibilities[Math.floor(Math.random()*game1possibilities.length)];
+console.log("Obtendo os jogos ultimos 5 recentes");
+
+// let recipeName = document.getElementById("nome1")
+ let gamesElem = document.getElementById("organize9");
+ var utilizador_id = sessionStorage.getItem("utilizador_id");
+ console.log("setItem->userId = " + utilizador_id);
+
+try{
+
+let games = await $.ajax({
+
+url: urlitem,
+method: "get",
+dataType: "json",
+
+});
+
+console.log("[utilizador] utilizador = " + JSON.stringify(games));
+
+let html = "";
+
+html += creategameoneHTML(games);
+
+
+console.log("OBTEVE");
+//  recipeName.innerHTML = html;
+
+gamesElem.innerHTML = html;
+
+
+} catch(err){
+ console.log(err);
+}
+}
+            //OBTER OS ULTIMOS 5 JOGOS MAIS BAIXADOS
+
+            async function getDownloadedGames(){
+
+console.log("Obtendo os jogos ultimos 5 recentes");
+
+// let recipeName = document.getElementById("nome1")
+ let gamesElem = document.getElementById("organize8");
+ var utilizador_id = sessionStorage.getItem("utilizador_id");
+ console.log("setItem->userId = " + utilizador_id);
+
+try{
+
+let games = await $.ajax({
+
+url: "/games/mostdownloaded/",
+method: "get",
+dataType: "json",
+
+});
+
+console.log("[utilizador] utilizador = " + JSON.stringify(games));
+
+let html = "";
+
+for(let game of games){
+ console.log("Jogo: " + game); //PORQUE DÁ ERRO?
+ html += creategamedownloadedHTML(game);
+}
+
+
+console.log("OBTEVE");
+//  recipeName.innerHTML = html;
+
+gamesElem.innerHTML = html;
+
+
+} catch(err){
+ console.log(err);
+}
+}
+
+
+
+            //OBTER OS ULTIMOS 5 JOGOS RECENTES
+
+            async function getGamesLatest(){
+
+console.log("Obtendo os jogos ultimos 5 recentes");
+
+// let recipeName = document.getElementById("nome1")
+ let gamesElem = document.getElementById("organize7");
+ var utilizador_id = sessionStorage.getItem("utilizador_id");
+ console.log("setItem->userId = " + utilizador_id);
+
+try{
+
+let games = await $.ajax({
+
+url: "/games/recentesgames/",
+method: "get",
+dataType: "json",
+
+});
+
+console.log("[utilizador] utilizador = " + JSON.stringify(games));
+
+let html = "";
+
+for(let game of games){
+ console.log("Jogo: " + game); //PORQUE DÁ ERRO?
+ html += creategameHTML(game);
+}
+
+
+console.log("OBTEVE");
+//  recipeName.innerHTML = html;
+
+gamesElem.innerHTML = html;
+
+
+} catch(err){
+ console.log(err);
+}
+}
+
+         }
+
+         function creategameoneHTML(jogo){
+  
+  return "<div class='selectbox95' id='selectbox95'>" + "<p name='gamename1' id='gamename1' style='text-align: center; font-size: 90%; margin-top: 10%;color:black;'><b>" + jogo.title + "</b></p>" + "<p name='gamereleased1' id='gamereleased1' style='text-align: center; font-size: 90%; margin-top: 22%;color:black;'>" + jogo.release_date + "</p>" + "<p name='rating1' id='rating1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.developer + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.publisher + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.genre + "</p>" +  "<a href='" + jogo.game_url + "'><button style='margin-top: 5%; margin-left: 3%;'>Jogar</button></a>" + "</div>"
+ 
+  // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+ /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA </p>*/
+
+}
+
+         function creategameHTML(jogo){
+  
+  return "<div class='selectbox85' id='selectbox85'>" + "<p name='gamename1' id='gamename1' style='text-align: center; font-size: 90%; margin-top: 10%;color:black;'><b>" + jogo.jogo_name + "</b></p>" + "<p name='gamereleased1' id='gamereleased1' style='text-align: center; font-size: 90%; margin-top: 22%;color:black;'>" + jogo.jogo_released + "</p>" + "<p name='rating1' id='rating1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_rating + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_downloads + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_preco + "</p>" +  "<button onclick='addtolibrary("+ JSON.stringify(jogo) + ")' style='margin-top: 5%; margin-left: 3%;'>Comprar Jogo</button>" + "<button onclick='addtowishlist(" + JSON.stringify(jogo) + ")'>Adicionar á Wishlist</button>" + "</div>"
+ 
+  // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+ /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA </p>*/
+
+}
+
+function creategamedownloadedHTML(jogo){
+  
+  return "<div class='selectbox85' id='selectbox85'>" + "<p name='gamename1' id='gamename1' style='text-align: center; font-size: 90%; margin-top: 10%;color:black;'><b>" + jogo.jogo_name + "</b></p>" + "<p name='gamereleased1' id='gamereleased1' style='text-align: center; font-size: 90%; margin-top: 22%;color:black;'>" + jogo.jogo_released + "</p>" + "<p name='rating1' id='rating1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_rating + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_downloads + "</p>" + "<p name='downloads1' id='downloads1' style='text-align: center; font-size: 90%; margin-top: 1%;color:black;'>" + jogo.jogo_preco + "</p>" +  "<button onclick='addtolibrary("+ JSON.stringify(jogo) + ")' style='margin-top: 5%; margin-left: 3%;'>Comprar Jogo</button>" + "<button onclick='addtowishlist(" + JSON.stringify(jogo) + ")'>Adicionar á Wishlist</button>" + "</div>"
+ 
+  // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+ /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA </p>*/
+
+}
+
+         </script>
+
+        </body>
+
+        
+
+</html>
