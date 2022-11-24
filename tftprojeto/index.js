@@ -86,16 +86,11 @@ const port = 5000
 
 app.get("/", function(req, res) {
 
-   res.sendFile(__dirname+"/public/wishlist.html")
-   
-})
-
-app.get("/inicial", function(req, res) {
-
    res.sendFile(__dirname+"/public/index.html")
    
-
 })
+
+
 
 
 
