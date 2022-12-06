@@ -27,7 +27,7 @@ const io = require('socket.io')(http)
 const http2 = require('http').createServer(app);
 const io2 = require('socket.io')(http2)
 
-app.use('/public', express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 nunjucks.configure('views', {express: app})
@@ -72,11 +72,11 @@ const cors = require('cors');
 const { isFloat32Array } = require('util/types')
 
 const corsOptions = {
-   origin: 'http://localhost:3000',
+   origin: 'http://localhost:5000',
    credentials: true,
    optionSucessStatus: 200
 }
-const port = 3000
+const port = 5000
 
 
 //app.get('/', (req, res) => res.send('Server is Upp!'))

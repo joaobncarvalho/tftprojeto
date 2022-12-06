@@ -33,12 +33,17 @@ io.on('connection', function(socket) {
 //FOR A SPECIFIC WEBPAGE
 
 
+app.get("/", function(req, res) {
+
+    res.sendFile(__dirname+"/public/index.html")
+
+})
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -56,7 +61,7 @@ app.get("/gametest8.html", function(req, res) {
 
  })
 
- http.listen(2000, function(){ //NPM STARTING
+ http.listen(3000, function(){ //NPM STARTING
 
 
     console.log("Listening on port: 2000");
