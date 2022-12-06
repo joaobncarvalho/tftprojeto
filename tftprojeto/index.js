@@ -85,13 +85,15 @@ const port = 5000
 
 //Acesso ás webpages
 
+
+
 app.get("/", function(req, res) {
 
    res.sendFile(__dirname+"/public/index.html")
    
 })
 
-
+app.use(express.static(__dirname + '/public'));
 
 
 
